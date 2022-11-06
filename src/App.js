@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import Profile  from './profile/profile';
+import zoubaida from "./pic.jpg"
+
 
 function App() {
+  const list={
+    name:"zoubaida",
+    bio:"hello i am a student",
+    profession:"computer science engineering student ",
+    imgurl:zoubaida
+        
+    }
+    const functionalert= (x) =>{
+      return alert(`hello my name is ${x}`) 
+    }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   
+    <div  style={{backgroundColor: "grey"}} className="App">
+      
+     <Profile data={list} myfunction={functionalert} ></Profile>
     </div>
   );
 }
